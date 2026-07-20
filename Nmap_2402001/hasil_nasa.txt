@@ -1,0 +1,35 @@
+# Nmap 7.99 scan initiated Mon Jul 20 09:30:58 2026 as: nmap -sV -O -A -T4 -oN hasil_nasa.txt www.nasa.gov
+Nmap scan report for www.nasa.gov (192.0.66.108)
+Host is up (0.069s latency).
+Other addresses for www.nasa.gov (not scanned): 2a04:fa87:fffd::c000:426c
+Not shown: 993 filtered tcp ports (no-response)
+PORT     STATE  SERVICE  VERSION
+21/tcp   open   ftp?
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   open   http     nginx
+|_http-title: Did not follow redirect to https://www.nasa.gov/
+443/tcp  open   ssl/http nginx
+| ssl-cert: Subject: commonName=nasa.gov
+| Subject Alternative Name: DNS:nasa.gov, DNS:www.nasa.gov
+| Not valid before: 2026-06-11T00:21:09
+|_Not valid after:  2026-09-09T00:21:08
+|_http-title: NASA
+|_http-generator: WordPress 7.0.2
+|_ssl-date: TLS randomness does not represent time
+554/tcp  open   rtsp?
+1723/tcp open   pptp?
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Network Distance: 6 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   30.00 ms 10.48.235.41
+2   ... 3
+4   46.00 ms 172.19.248.129
+5   48.00 ms 172.19.248.170
+6   50.00 ms 192.0.66.108
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 20 09:37:22 2026 -- 1 IP address (1 host up) scanned in 384.96 seconds
